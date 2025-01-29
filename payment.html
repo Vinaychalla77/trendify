@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="payment.css"> <!-- Your custom styles -->
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2 class="text-center">Checkout</h2>
+
+    <!-- Product Details Section -->
+    <div class="card">
+        <div class="card-header">
+            <h4 id="product_name">Product Name</h4>
+        </div>
+        <div class="card-body">
+            <!-- Product Image -->
+            <div class="product-image">
+                <img id="product_img" src="" alt="Product Image">
+            </div>
+
+            <!-- Product Details -->
+            <div class="product-details">
+                <p><strong>Price:</strong> ₹<span id="price">0.00</span></p>
+                <p><strong>Product ID:</strong> <span id="product_id">Unknown</span></p>
+                <p><strong>Description:</strong> <span id="description">No description available.</span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Payment Form -->
+    <form action="process_payment.php" method="POST">
+        <div class="mb-3">
+            <label for="name" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="mb-3">
+            <label for="card_number" class="form-label">Card Number</label>
+            <input type="text" class="form-control" id="card_number" name="card_number" required>
+        </div>
+        <div class="mb-3">
+            <label for="expiry_date" class="form-label">Expiry Date</label>
+            <input type="text" class="form-control" id="expiry_date" name="expiry_date" required>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Complete Payment</button>
+    </form>
+</div>
+
+<!-- PhonePe Payment Section -->
+<div class="container mt-4">
+    <h3 class="text-center">Or Pay With PhonePe</h3>
+    <div class="text-center">
+        <button class="btn btn-warning" onclick="window.location.href='https://www.phonepe.com/';">Pay Now via PhonePe</button>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>Company Name</h5>
+                <p>1234 Street Name, City, State, Country</p>
+            </div>
+            <div class="col-md-4">
+                <h5>Contact Us</h5>
+                <p>Email: support@company.com</p>
+                <p>Phone: +1 (123) 456-7890</p>
+            </div>
+            <div class="col-md-4">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="text-center">&copy; 2024 Company Name. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- JavaScript for Retrieving Data from LocalStorage -->
+<script>
+    // Retrieve product data from localStorage
+    document.getElementById('product_name').innerText = localStorage.getItem('product_name') || 'Unknown Product';
+    document.getElementById('price').innerText = localStorage.getItem('price') || '0.00';
+    document.getElementById('product_id').innerText = localStorage.getItem('product_id') || '0';
+    document.getElementById('description').innerText = localStorage.getItem('description') || 'No description available.';
+    document.getElementById('product_img').src = localStorage.getItem('product_img') || 'https://via.placeholder.com/150'; // Default image
+</script>
+
+</body>
+</html>

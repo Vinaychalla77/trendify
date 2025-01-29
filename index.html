@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trendify Inspired Layout</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Slick Slider CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="index.css">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Joystix&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <!-- Navbar Container -->
+    <div class="navbar-container">
+        <!-- Top Banner Section -->
+        <div class="top-banner">
+          <p>Enjoy free shipping from all over</p>
+        </div>
+      
+        <!-- Middle Section with Logo, Links, and Icons -->
+        <div class="middle-nav">
+          <!-- Logo -->
+          <div class="logo">
+            <img src="images/final-logo-copy.png" alt="Logo">
+          </div>
+
+
+
+           <!-- Navigation Links (hidden initially for mobile) -->
+            <!-- Navigation Links (hidden initially for mobile) -->
+<div class="nav-links">
+  <button class="close-btn" onclick="toggleNavbar()">×</button>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="deals.html">Deals</a></li>
+    <li><a href="#">Contact</a></li>
+    <li><a href="contact.html">Contact & Help</a></li>
+  </ul>
+</div>
+
+      
+          <!-- Icons (in the center) -->
+          <div class="icons">
+            <a href="javascript:void(0);" id="search-icon" onclick="toggleSearch()"><i class="fas fa-search"></i></a>
+            <a href="signin.html"><i class="fas fa-user"></i></a>
+            <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+          </div>
+
+          <!-- Search Bar (Initially Hidden) -->
+      <div class="search-container">
+        <input type="text" class="search-bar" id="search-bar" placeholder="Search...">
+        <button class="clear-btn" onclick="closeSearchBar()">
+            <i class="fas fa-times"></i> <!-- Clear icon (X) -->
+          </button>
+      </div>
+    
+      
+          <!-- Hamburger menu button (for mobile view) -->
+          <button class="navbar-toggler d-lg-none" onclick="toggleNavbar()">☰</button>
+        
+      
+       
+        </div>
+        <!-- Bottom Section with Category Links -->
+        <div class="bottom-nav">
+          <ul class="category-links">
+           <li><a href="#">Mens</a></li>
+            <span>|</span>
+           <li><a href="#">Womens</a></li>
+            <span>|</span>
+           <li><a href="#">Kids</a></li>
+           <span>|</span>
+           <li><a href="#">Sneakers</a></li>
+          </ul>
+        </div>
+      </div>
+
+
+  <div>
+    <img src="gifs/fashion.gif"  class="d-block w-100" alt="Home and Garden">
+</div>
+
+
+    <!-- Featured Products -->
+    <section class="container my-5">
+        <h2 class="text-center mb-4">TRENDING</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/home/classic-watch.png" class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                        <h5 class="deal-title">Classic Watch</h5>
+                    <p class="deal-description">Trendify Classic Watch: Timeless elegance, refined style.</p>
+                    <p class="deal-price">₹999</p>
+                    <button class="deal-btn" onclick="buyNow('Classic Watch', 999, 'images/home/classic-watch.png', 'Trendify Classic Watch: Timeless elegance, refined style.')">Buy Now</button>
+    <button class="add-to-cart-btn" onclick="addToCart('Classic Watch', 999, 'images/home/classic-watch.png', 'Trendify Classic Watch: Timeless elegance, refined style.')">Add to Cart</button>
+  
+                  </div>
+                </div>
+            </div>
+
+           <div class="col-md-4">
+                <div class="card">
+                    <img src="images/home/earbuds-00.png" class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                        <h5 class="deal-title">Earbuds Pro</h5>
+                    <p class="deal-description">Trendify Earbuds Pro: Immersive sound, advanced noise-canceling. </p>
+                    <p class="deal-price">₹1499</p>
+                    <button class="deal-btn" onclick="buyNow('Earbuds Pro', 1499, 'images/home/earbuds-00.png', 'Trendify Earbuds Pro: Immersive sound, advanced noise-canceling. ')">Buy Now</button>
+    <button class="add-to-cart-btn" onclick="addToCart('Earbuds Pro', 1499, 'images/home/earbuds-00.png', 'Trendify Earbuds Pro: Immersive sound, advanced noise-canceling. ')">Add to Cart</button>
+  
+                  </div>
+                </div>
+            </div>
+
+           <div class="col-md-4">
+                <div class="card">
+                    <img src="images/home/sneakers-01.png" class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                        <h5 class="deal-title">Trendify</h5>
+                    <p class="deal-description">Trendify Sneakers: Modern style, all-day comfort, Versatile design.</p>
+                    <p class="deal-price">₹1899</p>
+                    <button class="deal-btn" onclick="buyNow('Trendify', 1899, 'images/home/sneakers-01.png', 'Trendify Sneakers: Modern style, all-day comfort, Versatile design.')">Buy Now</button>
+    <button class="add-to-cart-btn" onclick="addToCart('Trendify', 1899, 'images/home/sneakers-01.png', 'Trendify Sneakers: Modern style, all-day comfort, Versatile design.')">Add to Cart</button>
+  
+                  </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Image Slider (Slick Carousel) -->
+    <div class="slider">
+        <div>
+            <img src="images/slick1.png"  class="d-block w-100" alt="Electronics">
+        </div>
+        <div>
+            <img src="images/slick2.png"  class="d-block w-100 " alt="Fashion Sale">
+        </div>
+        <div>
+            <img src="images/slick3.png"  class="d-block w-100 " alt="Home and Garden">
+        </div>
+    </div>
+    
+
+
+    <section class="container my-5">
+        <h2 class="text-center mb-4">NEW ARRIVALS</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="gifs/MEN.gif" alt="" style="max-width: 100%; height: auto;" class="new-arrivals">
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="gifs/WOMEN.gif" alt="" style="max-width: 100%; height: auto;">
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="gifs/20-offer.gif" alt="" style="max-width: 100%; height: auto;">
+                </div>
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <div>
+        <img src="gifs/classic.gif" class="d-block w-100" alt="Electronics">
+    </div>
+
+
+
+
+  
+
+
+<div class="responsive-div pt-4">
+    <img src="images/jewelery-cover.png" alt="Image" />
+    <a href="#"><button class="overlay-button">Shop Now</button></a>
+</div>
+
+
+
+    
+
+     <!-- Featured Products -->
+     <section class="container my-5">
+        <h2 class="text-center mb-4">FEATURED PRODUCTS</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/home/perfume-1.png" class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                        <h5 class="deal-title">Trendify Essence</h5>
+                    <p class="deal-description">Trendify Essence: Captivating aroma, long-lasting freshness.</p>
+                    <p class="deal-price">₹999</p>
+                    <button class="deal-btn" onclick="buyNow('Trendify Essence', 999, 'images/home/perfume-1.png', 'Trendify Essence: Captivating aroma, long-lasting freshness.')">Buy Now</button>
+    <button class="add-to-cart-btn" onclick="addToCart('Trendify Essence', 999, 'images/home/perfume-1.png', 'Trendify Essence: Captivating aroma, long-lasting freshness.')">Add to Cart</button>
+  
+                  </div>
+                </div>
+            </div>
+
+           <div class="col-md-4">
+                <div class="card">
+                    <img src="images/home/mobile-01.png" class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                        <h5 class="deal-title">Trendify Phone 1plus</h5>
+                    <p class="deal-description">Trendify Phone 1 Plus: Long battery, sleek design, powerful performance. </p>
+                    <p class="deal-price">₹21999</p>
+                    <button class="deal-btn" onclick="buyNow('Trendify Phone 1plus', 21999, 'images/home/mobile-01.png', 'Trendify Phone 1 Plus: Long battery, sleek design, powerful performance. ')">Buy Now</button>
+    <button class="add-to-cart-btn" onclick="addToCart('Trendify Phone 1plus', 21999, 'images/home/mobile-01.png', 'Trendify Phone 1 Plus: Long battery, sleek design, powerful performance. ')">Add to Cart</button>
+  
+                  </div>
+                </div>
+            </div>
+
+           <div class="col-md-4">
+                <div class="card">
+                    <img src="images/home/shoes-02.png" class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                        <h5 class="deal-title">Trendify Shoes</h5>
+                    <p class="deal-description">Trendify Shoes: Stylish, durable, and ultra-comfortable fit.</p>
+                    <p class="deal-price">₹1999</p>
+                    <button class="deal-btn" onclick="buyNow('Trendify Shoes', 1999, 'images/home/shoes-02.png', 'Trendify Shoes: Stylish, durable, and ultra-comfortable fit.')">Buy Now</button>
+    <button class="add-to-cart-btn" onclick="addToCart('Trendify Shoes', 1999, 'images/home/shoes-02.png', 'Trendify Shoes: Stylish, durable, and ultra-comfortable fit.')">Add to Cart</button>
+  
+                  </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    
+
+    <footer class="footer">
+        <div class="footer-top">
+          <h2>JOIN OUR <b>TRENDIFY.COM</b> </h2>
+          <div class="subscribe">
+            <input type="email" placeholder="Enter your email" />
+            <button>SUBSCRIBE</button>
+          </div>
+        </div>
+        <div class="footer-mid">
+          <h3>SPOT US ON
+          </h3>
+          <div class="social-box-container">
+            <div class="social-box">
+            <a href="https://www.instagram.com/govind.18_/profilecard/?igsh=MWxmcmY3bmtsMG9rcA=="><i class="fa-brands fa-instagram"></i> Instagram</a>
+            </div>
+            <div class="social-box">
+            <a href="https://www.linkedin.com/in/govind28"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+            </div>
+            <div class="social-box">
+            <a href="https://x.com/govindj28"><i class="fa-brands fa-twitter"></i> Twitter</a>
+            </div>
+            <div class="social-box">
+            <a href="https://api.whatsapp.com/send/?phone=9381753363&type=phone_number&app_absent=0"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-section">
+            <h4>CATEGORIES <span class="toggle mobile-only">+</span></h4>
+            <ul class="footer-links">
+              <li><a href="#">New Arrivals</a></li>
+              <li><a href="#">Bestsellers</a></li>
+              <li><a href="#">Oversized T-Shirts</a></li>
+              <li><a href="#">T-Shirts</a></li>
+              <li><a href="#">Unisex</a></li>
+              <li><a href="#">Shorts & Joggers</a></li>
+              <li><a href="#">Winter-Wear</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>COMPANY <span class="toggle mobile-only">+</span></h4>
+            <ul class="footer-links">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#">Work With Us</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>CUSTOMERS <span class="toggle mobile-only">+</span></h4>
+            <ul class="footer-links">
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Shipping Policy</a></li>
+              <li><a href="#">Refund Policy</a></li>
+              <li><a href="#">Track Order</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+      
+
+    <!-- jQuery (required for Slick Slider) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+    <!-- Slick Slider JS -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- Custom JavaScript for Slick Slider -->
+    <script src="index.js"></script>
+    <script src="g.js"></script>
+
+    <script>
+        // Function to handle the "Buy Now" button click
+        function buyNow(title, price, image, description) {
+          // Save product details to localStorage for the payment page
+          localStorage.setItem('product_name', title);
+          localStorage.setItem('price', price);
+          localStorage.setItem('description', description);  // Store description
+          localStorage.setItem('product_id', title); // Or use another unique identifier (e.g., product ID)
+          localStorage.setItem('product_img', image);
+        
+          // Redirect to the payment page
+          window.location.href = 'payment.html';
+        }
+        
+        // Function to add item to cart
+        function addToCart(title, price, image, description) {
+          const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+          const newItem = {
+            title: title,
+            price: price,
+            image: image,
+            description: description  // Include the description
+          };
+        
+          cartItems.push(newItem);
+          localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        
+          alert("Item added to cart!");
+        }
+
+
+
+
+
+
+
+        
+        </script>
+    
+</body>
+
+</html>

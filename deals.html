@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deals - E-Commerce</title>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="deals.css">
+    <!-- Bootstrap (Optional for responsive navbar or other utilities) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+
+
+</head>
+
+<body>
+
+     <!-- Navbar -->
+    <!-- Navbar Container -->
+  <div class="navbar-container">
+    <!-- Top Banner Section -->
+    <div class="top-banner">
+      <p>Enjoy free shipping from all over</p>
+    </div>
+
+    <!-- Middle Section with Logo, Links, and Icons -->
+    <div class="middle-nav">
+      <div class="logo">
+        <img src="images/final-logo-copy.png" alt="Logo" >
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="deals.html">Deals</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="contact.html">Contact & Help</a></li>
+      </ul>
+      <div class="icons">
+        
+        <a href="javascript:void(0);" id="search-icon" onclick="toggleSearch()"><i class="fas fa-search"></i></a>
+        <a href="signin.html"><i class="fas fa-user"></i></a>
+    <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+      </div>
+      
+      <!-- Search Bar (Initially Hidden) -->
+      <div class="search-container">
+        <input type="text" class="search-bar" id="search-bar" placeholder="Search...">
+        <button class="clear-btn" onclick="clearSearch()">
+            <i class="fas fa-times"></i> <!-- Clear icon (X) -->
+          </button>
+      </div>
+    </div>
+
+    <!-- Bottom Section with Additional Links -->
+    <div class="bottom-nav">
+      <ul class="category-links">
+        <li><a href="deals.html">Mens Wear</a></li>
+        <li><a href="#">Shirts</a></li>
+        <li><a href="#">Shoes</a></li>
+        <li><a href="#">Accessories</a></li>
+      </ul>
+    </div>
+  </div>
+
+    <!-- Deals Section -->
+    <div class="container deal-section">
+        <h2 class="deal-heading">Today's Hot Deals</h2>
+        <div class="deals-grid">
+            <!-- Generate 30 deals (you can duplicate this block) -->
+            <!-- Deal Card -->
+            <div class="deal-card">
+                <img src="images/deals/trendify-watch.png" alt="Product Name">
+                <div class="deal-info">
+                    <h5 class="deal-title">Trendify Watch</h5>
+                    <p class="deal-description">Trendify Watch: Stylish, durable, and timelessly sophisticated.</p>
+                    <p class="deal-price">₹999</p>
+                    <!-- Buy Now Button with URL Parameters -->
+                    <button class="deal-btn" onclick="buyNow('Trendify Watch', 999, 'images/deals/trendify-watch.png', 'Trendify Watch: Stylish, durable, and timelessly sophisticated.')">Buy Now</button>
+    <button class="add-to-cart-btn" onclick="addToCart('Trendify Watch', 999, 'images/deals/trendify-watch.png', 'Trendify Watch: Stylish, durable, and timelessly sophisticated.')">Add to Cart</button>
+  
+                 </div>
+            </div>
+
+            <!-- Repeat the deal cards to create 30+ cards -->
+            <div class="deal-card">
+                <img src="images/deals/wireless-earphones.png" alt="Product Name">
+                <div class="deal-info">
+                    <h5 class="deal-title">Wireless Earphones</h5>
+                    <p class="deal-description">Trendify Wireless Earphones: Clear sound, seamless connection</p>
+                    <p class="deal-price">₹899</p>
+                    <!-- Buy Now Button with URL Parameters -->
+                    <button class="deal-btn" onclick="buyNow('Wireless Earphones', 899, 'images/deals/wireless-earphones.png', 'Trendify Wireless Earphones: Clear sound, seamless connection')">Buy Now</button>
+    <button class="add-to-cart-btn" onclick="addToCart('Wireless Earphones', 899, 'images/deals/wireless-earphones.png', 'Trendify Wireless Earphones: Clear sound, seamless connection')">Add to Cart</button>
+  
+                 </div>
+            </div>
+
+            <!-- More Deals (Repeat similar structure to add 30+ deals) -->
+            <!-- For brevity, I'm repeating similar structure here -->
+            <!-- You can add more blocks like this to reach 30+ deals -->
+
+            <!-- Deal 3 -->
+            <div class="deal-card">
+                <img src="images/deals/new-snekers.png" alt="Product Name">
+                <div class="deal-info">
+                    <h5 class="deal-title">Trendify Sneakers</h5>
+                    <p class="deal-description">Trendify Sneakers: Comfort, style, and everyday versatility.</p>
+                    <p class="deal-price">₹799</p>
+                    <!-- Buy Now Button with URL Parameters -->
+                    <button class="deal-btn" onclick="buyNow('Trendify Sneakers', 799, 'images/deals/new-snekers.png', 'Trendify Sneakers: Comfort, style, and everyday versatility.')">Buy Now</button>
+    <button class="add-to-cart-btn" onclick="addToCart('Trendify Sneakers', 799, 'images/deals/new-snekers.png', 'Trendify Sneakers: Comfort, style, and everyday versatility.')">Add to Cart</button>
+  
+                 </div>
+            </div>
+
+
+           <div class="deal-card">
+                <img src="images/deals/smartphone.png" alt="Product Name">
+                <div class="deal-info">
+                    <h5 class="deal-title">trendify phone 1</h5>
+                    <p class="deal-description">Trendify Phone 1: Sleek design, powerful performance.</p>
+                    <p class="deal-price">₹17599</p>
+                    <!-- Buy Now Button with URL Parameters -->
+                    <button class="deal-btn" onclick="buyNow('Bluetooth Speaker', 17599, 'images/deals/smartphone.png', 'Trendify Phone 1: Sleek design, powerful performance.')">Buy Now</button>
+    <button class="add-to-cart-btn" onclick="addToCart('Bluetooth Speaker', 17599, 'images/deals/smartphone.png', 'Trendify Phone 1: Sleek design, powerful performance.')">Add to Cart</button>
+  
+                 </div>
+            </div>
+
+            <div class="deal-card">
+                <img src="images/deals/headphones.png" alt="Deal 3">
+                <div class="deal-info">
+                    <h5 class="deal-title">Trendify Headset</h5>
+                    <p class="deal-description">Trendify Headphones: Crystal-clear sound, ultimate comfort.</p>
+                    <p class="deal-price">₹1499</p>
+                    <button class="deal-btn" onclick="buyNow('Trendify Headset', 1499, 'images/deals/headphones.png', 'Trendify Headphones: Crystal-clear sound, ultimate comfort.')">Buy Now</button>
+    <button class="add-to-cart-btn" onclick="addToCart('Trendify Headset', 1499, 'images/deals/headphones.png', 'Trendify Headphones: Crystal-clear sound, ultimate comfort.')">Add to Cart</button>
+  
+                    
+                </div>
+            </div>
+
+            <div class="deal-card">
+                <img src="images/deals/luxury-shoes.png" alt="Deal 3">
+                <div class="deal-info">
+                    <h5 class="deal-title">Luxury Shoes</h5>
+                    <p class="deal-description">Trendify Luxury Shoes: Elegant design, superior craftsmanship.</p>
+                    <p class="deal-price">₹4999</p>
+                    <button class="deal-btn" onclick="buyNow('Luxury Shoes', 4999, 'images/deals/luxury-shoes.png', 'Trendify Luxury Shoes: Elegant design, superior craftsmanship.')">Buy Now</button>
+    <button class="add-to-cart-btn" onclick="addToCart('Luxury Shoes', 4999, 'images/deals/luxury-shoes.png', 'Trendify Luxury Shoes: Elegant design, superior craftsmanship.')">Add to Cart</button>
+  
+                    
+                </div>
+            </div>
+
+            <div class="deal-card">
+                <img src="images/deals/earphones-2.png" alt="Deal 3">
+                <div class="deal-info">
+                    <h5 class="deal-title">Trendify Earbuds 2</h5>
+                    <p class="deal-description">Trendify Earbuds 2: Premium sound, seamless connection.</p>
+                    <p class="deal-price">₹1299</p>
+                    <button class="deal-btn" onclick="buyNow('Trendify Earbuds 2', 1299, 'images/deals/earphones-2.png', 'Trendify Earbuds 2: Premium sound, seamless connection.')">Buy Now</button>
+    <button class="add-to-cart-btn" onclick="addToCart('Trendify Earbuds 2', 1299, 'images/deals/earphones-2.png', 'Trendify Earbuds 2: Premium sound, seamless connection.')">Add to Cart</button>
+  
+                    
+                </div>
+            </div>
+
+            <div class="deal-card">
+                <img src="images/deals/trendify-brightining-bodycare.png" alt="Deal 3">
+                <div class="deal-info">
+                    <h5 class="deal-title">Brightening Bodycare</h5>
+                    <p class="deal-description">Trendify Brightening Bodycare: Glow-enhancing, nourishing skincare.</p>
+                    <p class="deal-price">₹499</p>
+                    <button class="deal-btn" onclick="buyNow('Brightening Bodycare', 499, 'images/deals/trendify-brightining-bodycare.png', 'Trendify Brightening Bodycare: Glow-enhancing, nourishing skincare.')">Buy Now</button>
+    <button class="add-to-cart-btn" onclick="addToCart('Brightening Bodycare', 499, 'images/deals/trendify-brightining-bodycare.png', 'Trendify Brightening Bodycare: Glow-enhancing, nourishing skincare.')">Add to Cart</button>
+  
+                    
+                </div>
+            </div>
+
+            <div class="deal-card">
+                <img src="images/deals/acne-serum.png" alt="Deal 3">
+                <div class="deal-info">
+                    <h5 class="deal-title">Bluetooth Speaker</h5>
+                    <p class="deal-description">Portable Bluetooth speaker with great sound quality.</p>
+                    <p class="deal-price">₹17599</p>
+                    <button class="deal-btn" onclick="buyNow('Bluetooth Speaker', 79.99, 'images/deals/acne-serum.png', 'Portable Bluetooth speaker with great sound quality.')">Buy Now</button>
+    <button class="add-to-cart-btn" onclick="addToCart('Bluetooth Speaker', 79.99, 'images/deals/acne-serum.png', 'Portable Bluetooth speaker with great sound quality.')">Add to Cart</button>
+  
+                    
+                </div>
+            </div>
+
+            <div class="deal-card">
+                <img src="images/deals/bag.png" alt="Deal 3">
+                <div class="deal-info">
+                    <h5 class="deal-title">Bluetooth Speaker</h5>
+                    <p class="deal-description">Portable Bluetooth speaker with great sound quality.</p>
+                    <p class="deal-price">₹17599</p>
+                    <button class="deal-btn" onclick="buyNow('Bluetooth Speaker', 79.99, 'images/deals/bag.png', 'Portable Bluetooth speaker with great sound quality.')">Buy Now</button>
+    <button class="add-to-cart-btn" onclick="addToCart('Bluetooth Speaker', 79.99, 'images/deals/bag.png', 'Portable Bluetooth speaker with great sound quality.')">Add to Cart</button>
+  
+                    
+                </div>
+            </div>
+
+            <div class="deal-card">
+                <img src="images/deals/basketball.png" alt="Deal 3">
+                <div class="deal-info">
+                    <h5 class="deal-title">Bluetooth Speaker</h5>
+                    <p class="deal-description">Portable Bluetooth speaker with great sound quality.</p>
+                    <p class="deal-price">₹17599</p>
+                    <button class="deal-btn" onclick="buyNow('Bluetooth Speaker', 79.99, 'images/deals/basketball.png', 'Portable Bluetooth speaker with great sound quality.')">Buy Now</button>
+    <button class="add-to-cart-btn" onclick="addToCart('Bluetooth Speaker', 79.99, 'images/deals/basketball.png', 'Portable Bluetooth speaker with great sound quality.')">Add to Cart</button>
+  
+                    
+                </div>
+            </div>
+
+            <div class="deal-card">
+                <img src="images/deals/bodywash-3.png" alt="Deal 3">
+                <div class="deal-info">
+                    <h5 class="deal-title">Bluetooth Speaker</h5>
+                    <p class="deal-description">Portable Bluetooth speaker with great sound quality.</p>
+                    <p class="deal-price">₹17599</p>
+                   <button class="deal-btn" onclick="buyNow('Bluetooth Speaker', 79.99, 'images/deals/bodywash-3.png', 'Portable Bluetooth speaker with great sound quality.')">Buy Now</button>
+    <button class="add-to-cart-btn" onclick="addToCart('Bluetooth Speaker', 79.99, 'images/deals/bodywash-3.png', 'Portable Bluetooth speaker with great sound quality.')">Add to Cart</button>
+  
+                    
+                </div>
+            </div>
+
+            <div class="deal-card">
+                <img src="images/deals/dumbell-1.png" alt="Deal 3">
+                <div class="deal-info">
+                    <h5 class="deal-title">Bluetooth Speaker</h5>
+                    <p class="deal-description">Portable Bluetooth speaker with great sound quality.</p>
+                    <p class="deal-price">₹17599</p>
+                    <button class="deal-btn" onclick="buyNow('Bluetooth Speaker', 79.99, 'images/deals/dumbell-1.png', 'Portable Bluetooth speaker with great sound quality.')">Buy Now</button>
+    <button class="add-to-cart-btn" onclick="addToCart('Bluetooth Speaker', 79.99, 'images/deals/dumbell-1.png', 'Portable Bluetooth speaker with great sound quality.')">Add to Cart</button>
+  
+                    
+                </div>
+            </div>
+
+            <div class="deal-card">
+                <img src="images/deals/stylish-chair.png" alt="Deal 3">
+                <div class="deal-info">
+                    <h5 class="deal-title">Bluetooth Speaker</h5>
+                    <p class="deal-description">Portable Bluetooth speaker with great sound quality.</p>
+                    <p class="deal-price">₹17599</p>
+                    <button class="deal-btn" onclick="buyNow('Bluetooth Speaker', 79.99, 'images/deals/stylish-chair.png', 'Portable Bluetooth speaker with great sound quality.')">Buy Now</button>
+    <button class="add-to-cart-btn" onclick="addToCart('Bluetooth Speaker', 79.99, 'images/deals/stylish-chair.png', 'Portable Bluetooth speaker with great sound quality.')">Add to Cart</button>
+  
+                    
+                </div>
+            </div>
+
+            <div class="deal-card">
+                <img src="images/deals/headset-2.png" alt="Deal 3">
+                <div class="deal-info">
+                    <h5 class="deal-title">Bluetooth Speaker</h5>
+                    <p class="deal-description">Portable Bluetooth speaker with great sound quality.</p>
+                    <p class="deal-price">₹17599</p>
+                    <button class="deal-btn" onclick="buyNow('Bluetooth Speaker', 79.99, 'images/deals/headset-2.png', 'Portable Bluetooth speaker with great sound quality.')">Buy Now</button>
+    <button class="add-to-cart-btn" onclick="addToCart('Bluetooth Speaker', 79.99, 'images/deals/headset-2.png', 'Portable Bluetooth speaker with great sound quality.')">Add to Cart</button>
+  
+                    
+                </div>
+            </div>
+
+            <div class="deal-card">
+                <img src="images/deals/kettle.png" alt="Deal 3">
+                <div class="deal-info">
+                    <h5 class="deal-title">Bluetooth Speaker</h5>
+                    <p class="deal-description">Portable Bluetooth speaker with great sound quality.</p>
+                    <p class="deal-price">₹17599</p>
+                    <button class="deal-btn" onclick="buyNow('Bluetooth Speaker', 79.99, 'images/deals/kettle.png', 'Portable Bluetooth speaker with great sound quality.')">Buy Now</button>
+    <button class="add-to-cart-btn" onclick="addToCart('Bluetooth Speaker', 79.99, 'images/deals/kettle.png', 'Portable Bluetooth speaker with great sound quality.')">Add to Cart</button>
+  
+                 </div>
+            </div>
+
+            <div class="deal-card">
+                <img src="images/deals/lotion-2.png" alt="Deal 3">
+                <div class="deal-info">
+                    <h5 class="deal-title">Bluetooth Speaker</h5>
+                    <p class="deal-description">Portable Bluetooth speaker with great sound quality.</p>
+                    <p class="deal-price">₹17599</p>
+                    <button class="deal-btn" onclick="buyNow('Bluetooth Speaker', 79.99, 'images/deals/lotion-2.png', 'Portable Bluetooth speaker with great sound quality.')">Buy Now</button>
+    <button class="add-to-cart-btn" onclick="addToCart('Bluetooth Speaker', 79.99, 'images/deals/lotion-2.png', 'Portable Bluetooth speaker with great sound quality.')">Add to Cart</button>
+  
+                </div>
+            </div>
+
+            
+                <div class="deal-card">
+                    <img src="images/deals/earphones-3.png" alt="Product Name">
+                    <div class="deal-info">
+                        <h5 class="deal-title">Product Name</h5>
+                        <p class="deal-description">Portable Bluetooth speaker with great sound quality.</p>
+                        <p class="deal-price">₹1759999.99</p>
+                        <!-- Buy Now Button with URL Parameters -->
+                        <button class="deal-btn" onclick="buyNow('Bluetooth Speaker', 79.99, 'images/deals/earphones-3.png', 'Portable Bluetooth speaker with great sound quality.')">Buy Now</button>
+    <button class="add-to-cart-btn" onclick="addToCart('Bluetooth Speaker', 79.99, 'images/deals/earphones-3.png', 'Portable Bluetooth speaker with great sound quality.')">Add to Cart</button>
+  
+                     </div>
+                </div>
+           
+            <div class="deal-card">
+                <img src="images/deals/office-chair.png" alt="Product Name">
+                <div class="deal-info">
+                    <h5 class="deal-title">Product Name</h5>
+                    <p class="deal-description">Portable Bluetooth speaker with great sound quality.</p>
+                    <p class="deal-price">₹1759999.99</p>
+                    <!-- Buy Now Button with URL Parameters -->
+                    <button class="deal-btn" onclick="buyNow('Bluetooth Speaker', 79.99, 'images/deals/office-chair.png', 'Portable Bluetooth speaker with great sound quality.')">Buy Now</button>
+    <button class="add-to-cart-btn" onclick="addToCart('Bluetooth Speaker', 79.99, 'images/deals/office-chair.png', 'Portable Bluetooth speaker with great sound quality.')">Add to Cart</button>
+  
+                 </div>
+            </div>
+        
+
+        <div class="deal-card">
+                    <img src="images/deals/dumbell-2.png" alt="Product Name">
+                    <div class="deal-info">
+                        <h5 class="deal-title">Product Name</h5>
+                        <p class="deal-description">Portable Bluetooth speaker with great sound quality.</p>
+                        <p class="deal-price">₹1759999.99</p>
+                        <!-- Buy Now Button with URL Parameters -->
+                        <button class="deal-btn" onclick="buyNow('Bluetooth Speaker', 79.99, 'images/deals/dumbell-2.png', 'Portable Bluetooth speaker with great sound quality.')">Buy Now</button>
+    <button class="add-to-cart-btn" onclick="addToCart('Bluetooth Speaker', 79.99, 'images/deals/dumbell-2.png', 'Portable Bluetooth speaker with great sound quality.')">Add to Cart</button>
+  
+                     </div>
+                </div>
+            
+            <!-- Continue adding deals up to 30 -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 E-Commerce. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+    <script src="g.js"></script>
+<script>
+// Function to handle the "Buy Now" button click
+function buyNow(title, price, image, description) {
+  // Save product details to localStorage for the payment page
+  localStorage.setItem('product_name', title);
+  localStorage.setItem('price', price);
+  localStorage.setItem('description', description);  // Store description
+  localStorage.setItem('product_id', title); // Or use another unique identifier (e.g., product ID)
+  localStorage.setItem('product_img', image);
+
+  // Redirect to the payment page
+  window.location.href = 'payment.html';
+}
+
+// Function to add item to cart
+function addToCart(title, price, image, description) {
+  const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+  const newItem = {
+    title: title,
+    price: price,
+    image: image,
+    description: description  // Include the description
+  };
+
+  cartItems.push(newItem);
+  localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+  alert("Item added to cart!");
+}
+</script>
+</body>
+
+</html>

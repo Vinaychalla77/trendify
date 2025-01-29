@@ -1,0 +1,811 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Container */
+/* General Navbar Container */
+.navbar-container {
+  width: 100%;
+  position: relative;
+}
+
+/* Top Banner Section */
+.top-banner {
+  background-color: #f05a22;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  width: 100%;
+}
+
+/* Middle Section */
+.middle-nav {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 20px;
+  background-color: #ffffff;
+}
+
+/* Logo */
+.logo img {
+  width: 150px; /* Adjust logo size */
+  max-width: 100%; /* Make logo responsive */
+}
+
+/* Navigation Links - Mobile Slide-in */
+.nav-links {
+  display: none; /* Hidden by default */
+  flex-direction: column; /* Stack vertically on mobile */
+  position: fixed;
+  top: 0;
+  left: -100%; /* Initially off-screen */
+  width: 70%;
+  height: 100%;
+  background-color: #ffffff;
+  transition: left 0.3s ease;
+  z-index: 999; /* Ensure it's on top */
+  list-style: none;
+  padding: 0;
+}
+
+.nav-links.active {
+  display: flex;
+  left: 0; /* Slide in when active */
+}
+
+/* Close button - Initially hidden */
+.close-btn {
+  display: none; /* Hidden by default */
+  background: none;
+  border: none;
+  font-size: 30px;
+  color: #000;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+  z-index: 999; /* Ensure the close button is on top */
+}
+
+/* When the nav-links are active (menu is open), show the close button */
+.nav-links.active {
+  display: flex;
+  left: 0; /* Slide in when active */
+}
+
+.nav-links.active .close-btn {
+  display: block; /* Show the close button when the menu is active */
+}
+
+/* Desktop View - Show nav links */
+@media (min-width: 992px) {
+  .nav-links {
+    display: flex; /* Ensure nav-links are visible on desktop */
+    position: relative;
+    top: 0;
+    left: 0;
+    width: auto; /* Adjust width as needed */
+    height: auto; /* Remove full-height restriction */
+    box-shadow: none; /* Remove shadow on desktop */
+    padding: 0;
+    gap: 15px;
+    flex-direction: row; /* Ensure items are in a row */
+  }
+
+
+  .nav-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+  
+    gap: 20px;
+    display: flex;
+  }
+  
+
+  .nav-links li {
+    margin: 0 15px; /* Add spacing between nav items */
+  }
+}
+
+/* Navigation List */
+.nav-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  padding-left: 20px;
+
+  gap: 20px;
+
+  
+}
+
+.nav-links li {
+  margin: 15px 0;
+}
+
+.nav-links a {
+  color: #000;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #f05a22;
+}
+
+/* Icons */
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icons a {
+  color: #000;
+  font-size: 20px;
+  transition: color 0.3s ease-in-out;
+}
+
+.icons a:hover {
+  color: #f05a22;
+}
+
+/* Search Bar Container */
+.search-container {
+  display: none; /* Hidden initially */
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0; /* Start with 0 width */
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  z-index: 1000; /* Ensure above content */
+}
+
+.search-container.active {
+  display: block;
+  width: 100%;
+  height: ;
+ 
+}
+
+.search-bar {
+  width: 100%;
+  padding: 0px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+ padding: 10px;
+
+  
+}
+
+.clear-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.clear-btn:hover {
+  color: #f05a22;
+}
+
+/* Hamburger toggle button (mobile view) */
+.navbar-toggler {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #000;
+  cursor: pointer;
+}
+
+/* Bottom Section with Category Links */
+.bottom-nav {
+  background-color: #002a5c;
+  padding: 10px 0;
+  overflow: hidden; /* Prevents content from overflowing */
+  box-sizing: border-box; /* Includes padding in width calculations */
+  width: 100%; /* Ensures the container spans the full width */
+}
+
+.category-links {
+  display: flex;
+  justify-content: center; /* Centers the links */
+  align-items: center; /* Aligns the links vertically */
+  gap: 10px; /* Adds spacing between items */
+  list-style: none; /* Removes bullet points */
+  margin: 0; /* Resets margin */
+  padding: 0; /* Resets padding */
+  flex-wrap: wrap; /* Allows wrapping of items for smaller screens */
+}
+
+.category-links li {
+  margin: 0; /* Removes excess margin */
+  padding: 5px; /* Adds spacing around links */
+}
+
+.category-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px; /* Adjust font size for mobile */
+  white-space: nowrap; /* Prevents text from breaking into multiple lines */
+}
+
+.category-links a:hover {
+  color: #f05a22;
+}
+
+.bottom-nav span {
+  color: #ccc; /* Color for the vertical bars */
+  font-weight: normal;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .category-links {
+    flex-direction: row; /* Keeps links in a row */
+    gap: 5px; /* Reduces gap for smaller screens */
+  }
+
+  .category-links li {
+    padding: 2px; /* Reduces padding for links on mobile */
+  }
+
+  .category-links a {
+    font-size: 15px; /* Makes the text smaller for mobile */
+  }
+}
+
+
+/* Media Query for Mobile View */
+@media (max-width: 991px) {
+  /* Middle navigation adjustments for mobile */
+  .middle-nav {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Hamburger menu toggle (on the left) */
+  .navbar-toggler {
+    order: 1; /* Place first */
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #000;
+    cursor: pointer;
+  }
+
+  /* Logo (centered) */
+  .logo {
+    order: 2; /* Place second */
+    flex: 1; /* Center logo using available space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo img {
+    width: 120px; /* Adjust size for mobile */
+    height: auto;
+  }
+
+  /* Icons (on the right) */
+  .icons {
+    order: 3; /* Place third */
+    display: flex;
+    gap: 15px;
+  }
+
+  .icons a {
+    color: #000;
+    font-size: 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+  .icons a:hover {
+    color: #f05a22;
+    transform: scale(1.1);
+  }
+}
+
+/* Responsive Layout for Mobile View */
+@media (max-width: 768px) {
+  /* Middle navigation adjustments for mobile */
+  .middle-nav {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+  }
+
+  .search-container {
+    position: fixed; /* Ensure it stays visible */
+    top: 87px; /* Adjust as per the middle-nav height */
+    left: 0;
+    width: 100%; /* Full screen width */
+    height: 58px;
+    padding: 10px 15px;
+   
+}
+
+.search-bar {
+    width: calc(100% - 30px); /* Adjust for smaller margins */
+}
+
+  /* Hamburger menu toggle (on the left) */
+  .navbar-toggler {
+    order: 1; /* Place first */
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #000;
+    cursor: pointer;
+  }
+
+  /* Logo (centered) */
+  .logo {
+    order: 2; /* Place second */
+    flex: 1; /* Center logo using available space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo img {
+    width: 120px; /* Adjust size for mobile */
+    height: auto;
+  }
+
+  /* Icons (on the right) */
+  .icons {
+    order: 3; /* Place third */
+    display: flex;
+    gap: 15px;
+  }
+
+  .icons a {
+    color: #000;
+    font-size: 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+  .icons a:hover {
+    color: #f05a22;
+    transform: scale(1.1);
+  }
+}
+
+  
+ 
+
+/* Ensure slider container takes full width */
+.slider {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Image styling to make them responsive */
+.slider img {
+  width: 100%;
+  height: auto;
+  display: block;  /* Ensures no extra space around images */
+  object-fit: cover; /* Keeps images within the container without distortion */
+  cursor: pointer;
+}
+
+/* Center dots for navigation */
+.slick-dots {
+  bottom: 15px;
+  text-align: center;
+}
+
+.slick-dots li button:before {
+  font-size: 10px;
+  color: #ddd;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #333;
+}
+
+.new-arrivals {
+  cursor: pointer;
+}
+
+.responsive-div {
+  position: relative; /* Make the div the reference for absolute positioning */
+  width: 100%; /* Full width */
+}
+
+.responsive-div img {
+  width: 100%; /* Make the image fill the div */
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the div without distortion */
+  display: block; /* Prevent any unwanted spacing below the image */
+}
+
+.overlay-button {
+  position: absolute; /* Position the button relative to the div */
+  bottom: 20px; /* Place the button 20px from the bottom of the div */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Ensure the button is exactly centered */
+  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+  padding: 10px 20px; /* Button padding */
+  border: none; /* Remove default border */
+  font-size: 16px; /* Font size */
+  color: #333; /* Text color */
+  cursor: pointer; /* Change cursor on hover */
+  border-radius: 5px; /* Optional: Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.overlay-button:hover {
+  background-color: rgba(255, 255, 255, 0.9); /* Button background on hover */
+}
+
+
+
+
+/* Featured Products Section */
+
+.text-center {
+  color: #ad3400;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bolder;
+  font-size: 60px;
+}
+
+.card {
+    margin-bottom: 30px;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.card-text {
+    font-size: 14px;
+    color: #777;
+}
+
+.text-primary {
+    font-size: 16px;
+    font-weight: 700;
+    color: #007bff;
+}
+
+.btn-primary {
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+
+/*
+.deal-description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+  */
+
+
+/* Button Styling */
+.deal-btn,
+.add-to-cart-btn {
+  display: inline-block;
+  padding: 8px 12px;
+  margin: 5px;
+  font-size: 14px;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.deal-btn {
+  background-color: #007bff;
+}
+
+.add-to-cart-btn {
+  background-color: #28a745;
+}
+
+.deal-btn:hover {
+  background-color: #0056b3;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #218838;
+}
+
+.footer {
+  background-color: #f05922cf;
+  color: #ffffff;
+  text-align: center;
+  padding: 40px 20px;
+  font-family: 'Joystix', sans-serif;
+}
+
+.footer-top h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.subscribe {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.subscribe input {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  width: 250px;
+}
+
+.subscribe button {
+  background-color: #800080;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.footer-mid {
+  margin: 40px 0;
+}
+
+.footer-mid h3 {
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.social-box-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.social-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 25%; /* Default for larger screens */
+  height: 70px;
+  background-color: #ffffff;
+  color: #f05922dd;
+  border-radius: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.social-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.social-box i {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.social-box a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-section {
+ margin-bottom: 20px;
+}
+
+.footer-section h4 {
+  color: #000;
+  font-weight: bolder;
+}
+
+
+
+.footer-section ul {
+  display: block; /* Show by default on desktops */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #000000;
+  
+}
+
+.footer-section ul li a:hover {
+  color: #ffffff;
+}
+
+
+/* Mobile Styles */
+/* Mobile Styles */
+/* Mobile Styles */
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .footer-bottom {
+    flex-direction: column; /* Stack main links in a column on mobile */
+  }
+  .footer-top h2 {
+    font-size: 28px;
+  }
+
+  .subscribe input {
+    width: 200px;
+  }
+
+  .footer-mid h3 {
+    font-size: 20px;
+  }
+
+  .social-box-container {
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: center;
+  }
+
+  .social-box {
+    width: 45%; /* Adjust to show 2 boxes per row */
+    margin-bottom: 10px;
+  }
+
+  
+
+  
+
+  .footer-section ul {
+    display: none;
+  
+  }
+
+  .footer-section.active ul {
+    display: block;
+    padding-left: 20px;
+    list-style: none;
+    font-size: 23px;
+  }
+  .footer-section h4 {
+    display: flex; /* Make h4 block-level */
+    justify-content: space-between;
+    margin-bottom: 10px; /* Add space below h4 */
+  }
+
+
+.toggle {
+  display: none; /* Hide toggle by default */
+}
+
+.mobile-only {
+  display: inline-block; /* Show toggle on mobile */
+  
+  cursor: pointer;
+}
+
+.footer-section.active .mobile-only {
+  content: "-";
+}
+  
+}
+ 
+/* Hide toggle on desktops */
+@media (min-width: 769px) { /* Adjust breakpoint as needed */
+  .mobile-only {
+    display: none;
+  }
+}
+
+/* Add br between main links on mobile */
+@media (max-width: 768px) {
+  .footer-section h4 {
+    
+    margin-bottom: 10px; /* Add space below h4 */
+    border-color: black;
+    border-bottom: 1.5px solid;
+    
+  }
+}
+
+/* Very Small Screens */
+@media (max-width: 480px) {
+  .subscribe input {
+    width: 150px;
+  }
+
+  .footer-top h2 {
+    font-size: 24px;
+  }
+
+  .footer-mid h3 {
+    font-size: 18px;
+  }
+
+  .social-box-container {
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: center;
+  }
+
+  .social-box {
+    width: 45%; /* Adjust to show 2 boxes per row */
+    margin-bottom: 10px;
+  }
+
+  .footer-section ul li {
+    font-size: 12px;
+  }
+}
+
+
+
+
+
+
+ 
+/* Responsive adjustments for small screens */
+@media (max-width: 1024px) {
+  .slider img {
+      padding: 0 10px; /* Add some side padding on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .slider img {
+      padding: 0 5px; /* Add smaller padding on small screens */
+  }
+
+  .slick-dots li button:before {
+      font-size: 8px; /* Smaller dot size for mobile */
+  }
+}

@@ -1,0 +1,177 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f1f3f4; /* Light grey background */
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 450px;
+}
+
+.logo {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-label {
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+}
+
+.form-control {
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #4285f4;
+    box-shadow: 0 0 0 0.2rem rgba(66, 133, 244, 0.25);
+}
+
+.btn-primary {
+    background-color: #4285f4;
+    border: none;
+    font-size: 16px;
+    padding: 12px 0;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #3367d6;
+}
+
+.text-center a {
+    font-size: 14px;
+    color: #4285f4;
+    text-decoration: none;
+}
+
+.text-center a:hover {
+    text-decoration: underline;
+}
+
+/* Divider */
+.divider-text {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    font-weight: 500;
+    color: #aaa;
+}
+
+.divider-text::before,
+.divider-text::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 45%;
+    border-bottom: 1px solid #ccc;
+}
+
+.divider-text::before {
+    left: 0;
+}
+
+.divider-text::after {
+    right: 0;
+}
+
+/* Google and Facebook Buttons */
+.btn-outline-danger {
+    border-color: #db4437;
+    color: #db4437;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: left;
+}
+
+.btn-outline-danger:hover {
+    background-color: #db4437;
+    color: white;
+}
+
+.btn-outline-primary {
+    border-color: #3b5998;
+    color: #3b5998;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: left;
+}
+
+.btn-outline-primary:hover {
+    background-color: #3b5998;
+    color: white;
+}
+
+/* Google Sign-In Button */
+.g-signin2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #4285f4;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    height: 50px;
+    box-sizing: border-box;
+}
+
+.g-signin2:hover {
+    background-color: #3367d6;
+}
+
+.g-signin2 i {
+    margin-right: 10px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 576px) {
+    .logo {
+        width: 150px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .form-control {
+        padding: 10px;
+    }
+}

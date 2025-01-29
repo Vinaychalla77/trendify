@@ -1,0 +1,153 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f8f9fa;
+    color: #333;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Cart Page Styling */
+  #cart-items {
+    max-width: 800px;
+    margin-top: 20px;
+    padding: 0;
+  }
+  
+  .cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .cart-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .cart-item-image {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+  }
+  
+  .cart-item-details {
+    flex-grow: 1;
+    padding: 0 15px;
+  }
+  
+  .cart-item-details h5 {
+    font-size: 18px;
+    color: #333;
+    margin: 0 0 5px;
+  }
+  
+  .cart-item-details p {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+  }
+  
+  .stock-status {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .quantity-selector {
+    font-size: 14px;
+    padding: 5px;
+    margin-top: 5px;
+  }
+  
+  .cart-item-actions {
+    text-align: right;
+  }
+  
+  .price {
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .delete-btn {
+    color: #dc3545;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  .delete-btn:hover {
+    text-decoration: underline;
+  }
+  
+  .buy-now-btn {
+    color: #007bff;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  .buy-now-btn:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Design for Cart Page */
+  @media (max-width: 768px) {
+    .cart-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .cart-item h5,
+    .cart-item p {
+      margin-bottom: 5px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .cart-item h5 {
+      font-size: 16px;
+    }
+  
+    .cart-item p {
+      font-size: 14px;
+    }
+  
+    .delete-btn,
+    .buy-now-btn {
+      font-size: 12px;
+    }
+  
+    .cart-item button {
+      padding: 4px 8px;
+      font-size: 12px;
+    }
+  
+    .quantity-selector {
+      font-size: 12px;
+    }
+  
+    .price {
+      font-size: 18px;
+    }
+  }
+  

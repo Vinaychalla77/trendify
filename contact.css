@@ -1,0 +1,100 @@
+/* styles.css */
+
+/* General Body and Layout */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+.main-container {
+    margin-top: 50px;
+}
+
+/* Section Heading */
+.section-heading {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Form */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.label {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background-color: #0056b3;
+}
+
+/* FAQ Section */
+.faq-section {
+    margin-top: 40px;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-header .faq-button {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.faq-body {
+    padding: 15px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.faq-button.collapsed {
+    background-color: #e9ecef;
+}
+
+/* Map Section */
+.map-section {
+    margin-top: 50px;
+}
+
+/* Footer */
+.footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
